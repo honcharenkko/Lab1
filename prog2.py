@@ -16,5 +16,9 @@ def operator(z, a, b):
     elif z == "mul":
         print("Result: ", a * b)
     elif z == "div":
-        print("Result: ", a / b)
+        if b == 0:
+            print("Делить на 0 нельзя!")
+        else:
+            print("Result: ", a / b)
 operator(args.z, args.a, args.b)
+
