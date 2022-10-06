@@ -11,10 +11,13 @@ args = parser.parse_args()
 def operator(a, z, b):
     if z == "+":
         print("Result: ", a + b)
-    if z == "-":
+    elif z == "-":
         print("Result: ", a - b)
-    if z == "*":
+    elif z == "*":
         print("Result: ", a * b)
-    if z == "/":
-        print("Result: ", a / b)
+    elif z == "/":
+        if b == 0:
+            print("Делить на 0 нельзя!")
+        else:
+            print("Result: ", a / b)
 operator(args.a, args.z, args.b)
